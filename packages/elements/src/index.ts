@@ -26,6 +26,8 @@ export * from "./tool";
 // Developer Tools
 export * from "./terminal";
 
-// Reasoning Components
+// Content Display
 export * from "./reasoning";
 export * from "./chain-of-thought";
+export * from "./sources";
+export * from "./image";
