@@ -26,6 +26,6 @@ export * from "./tool";
 // Developer Tools
 export * from "./terminal";
 
-// Reasoning Components
-export * from "./reasoning";
-export * from "./chain-of-thought";
+// Citations & Context
+export * from "./inline-citation";
+export * from "./context";
