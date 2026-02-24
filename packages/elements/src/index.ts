@@ -19,3 +19,6 @@ export * from "./prompt-input";
 export * from "./loader";
 export * from "./shimmer";
 export * from "./suggestion";
+
+// Tool Components
+export * from "./tool";

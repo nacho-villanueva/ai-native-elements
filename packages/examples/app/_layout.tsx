@@ -101,6 +101,27 @@ export default function RootLayout() {
               title: "Prompt Input",
             }}
           />
+          <Drawer.Screen
+            name="components/terminal"
+            options={{
+              drawerLabel: () => <Text testID="nav-terminal" className="text-foreground">Terminal</Text>,
+              title: "Terminal",
+            }}
+          />
+          <Drawer.Screen
+            name="components/tool"
+            options={{
+              drawerLabel: () => <Text testID="nav-tool" className="text-foreground">Tool</Text>,
+              title: "Tool",
+            }}
+          />
+          <Drawer.Screen
+            name="components/code-block"
+            options={{
+              drawerLabel: () => <Text testID="nav-code-block" className="text-foreground">Code Block</Text>,
+              title: "Code Block",
+            }}
+          />
         </Drawer>
         <StatusBar style={darkMode ? "light" : "dark"} />
       </GestureHandlerRootView>
