@@ -122,6 +122,69 @@ export default function RootLayout() {
               title: "Code Block",
             }}
           />
+          <Drawer.Screen
+            name="components/file-tree"
+            options={{
+              drawerLabel: () => <Text testID="nav-file-tree" className="text-foreground">File Tree</Text>,
+              title: "File Tree",
+            }}
+          />
+          <Drawer.Screen
+            name="components/commit"
+            options={{
+              drawerLabel: () => <Text testID="nav-commit" className="text-foreground">Commit</Text>,
+              title: "Commit",
+            }}
+          />
+          <Drawer.Screen
+            name="components/schema-display"
+            options={{
+              drawerLabel: () => <Text testID="nav-schema-display" className="text-foreground">Schema Display</Text>,
+              title: "Schema Display",
+            }}
+          />
+          <Drawer.Screen
+            name="components/test-results"
+            options={{
+              drawerLabel: () => <Text testID="nav-test-results" className="text-foreground">Test Results</Text>,
+              title: "Test Results",
+            }}
+          />
+          <Drawer.Screen
+            name="components/stack-trace"
+            options={{
+              drawerLabel: () => <Text testID="nav-stack-trace" className="text-foreground">Stack Trace</Text>,
+              title: "Stack Trace",
+            }}
+          />
+          <Drawer.Screen
+            name="components/checkpoint"
+            options={{
+              drawerLabel: () => <Text testID="nav-checkpoint" className="text-foreground">Checkpoint</Text>,
+              title: "Checkpoint",
+            }}
+          />
+          <Drawer.Screen
+            name="components/environment-variables"
+            options={{
+              drawerLabel: () => <Text testID="nav-environment-variables" className="text-foreground">Environment Variables</Text>,
+              title: "Environment Variables",
+            }}
+          />
+          <Drawer.Screen
+            name="components/package-info"
+            options={{
+              drawerLabel: () => <Text testID="nav-package-info" className="text-foreground">Package Info</Text>,
+              title: "Package Info",
+            }}
+          />
+          <Drawer.Screen
+            name="components/attachments"
+            options={{
+              drawerLabel: () => <Text testID="nav-attachments" className="text-foreground">Attachments</Text>,
+              title: "Attachments",
+            }}
+          />
         </Drawer>
         <StatusBar style={darkMode ? "light" : "dark"} />
       </GestureHandlerRootView>
