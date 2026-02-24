@@ -42,9 +42,9 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 - [ ] `confirmation` - Tool approval workflow
 
 ### Planning & Tasks
-- [ ] `plan` - AI-generated plans display
-- [ ] `task` - Individual task display
-- [ ] `queue` - Task queue management
+- [x] `plan` - AI-generated plans display
+- [x] `task` - Individual task display
+- [x] `queue` - Task queue management
 
 ### UI Feedback
 - [x] `loader` - Spinning loader indicator
@@ -92,7 +92,7 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 | Category | Total | Completed |
 |----------|-------|-----------|
 | Setup | 6 | 6 |
-| Chatbot | 29 | 10 |
+| Chatbot | 29 | 9 |
 | Dev/Utility | 11 | 0 |
 | **Total** | **46** | **16** |
 

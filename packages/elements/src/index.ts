@@ -26,8 +26,7 @@ export * from "./tool";
 // Developer Tools
 export * from "./terminal";
 
-// Content Display
-export * from "./reasoning";
-export * from "./chain-of-thought";
-export * from "./sources";
-export * from "./image";
+// Planning & Tasks
+export * from "./plan";
+export * from "./task";
+export * from "./queue";
