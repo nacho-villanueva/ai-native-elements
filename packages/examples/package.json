@@ -1,0 +1,45 @@
+{
+  "name": "@ai-native-elements/examples",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "EXPO_UNSTABLE_MCP_SERVER=1 expo start",
+    "android": "EXPO_UNSTABLE_MCP_SERVER=1 expo start --android",
+    "ios": "EXPO_UNSTABLE_MCP_SERVER=1 expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@ai-native-elements/react-native": "workspace:*",
+    "@ai-native-elements/shadcn-ui": "workspace:*",
+    "@react-native-masked-view/masked-view": "^0.3.2",
+    "@react-navigation/drawer": "~7.3.8",
+    "expo": "~54.0.31",
+    "expo-clipboard": "~8.0.0",
+    "expo-constants": "~18.0.11",
+    "expo-linear-gradient": "~15.0.5",
+    "expo-linking": "~8.0.10",
+    "expo-router": "~5.0.7",
+    "expo-status-bar": "~3.0.9",
+    "lucide-react-native": "^0.475.0",
+    "nativewind": "^4.2.1",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-drawer-layout": "~4.1.0",
+    "react-native-gesture-handler": "~2.24.0",
+    "react-native-markdown-display": "^7.0.2",
+    "react-native-reanimated": "~4.1.0",
+    "react-native-safe-area-context": "5.4.1",
+    "react-native-screens": "~4.10.0",
+    "react-native-svg": "^15.11.2",
+    "react-native-worklets": "^0.5.1"
+  },
+  "devDependencies": {
+    "@ai-native-elements/tailwind-config": "workspace:*",
+    "@ai-native-elements/typescript-config": "workspace:*",
+    "@types/react": "~19.1.0",
+    "expo-mcp": "~0.2.1",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.2"
+  }
+}

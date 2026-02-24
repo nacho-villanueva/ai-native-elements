@@ -1,0 +1,96 @@
+{
+  "name": "@ai-native-elements/react-native",
+  "version": "0.1.0",
+  "description": "AI Elements ported to React Native - A component library for building AI-native mobile applications",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "react-native",
+    "ai",
+    "ui-components",
+    "nativewind",
+    "expo",
+    "chat",
+    "llm",
+    "ai-sdk"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/ai-native-elements",
+    "directory": "packages/elements"
+  },
+  "peerDependencies": {
+    "@react-native-masked-view/masked-view": ">=0.3.0",
+    "expo-linear-gradient": ">=13.0.0",
+    "nativewind": ">=4.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.73.0",
+    "react-native-markdown-display": ">=7.0.0",
+    "react-native-reanimated": ">=3.0.0",
+    "expo-clipboard": ">=6.0.0",
+    "react-native-svg": ">=13.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@react-native-masked-view/masked-view": {
+      "optional": true
+    },
+    "expo-clipboard": {
+      "optional": true
+    },
+    "expo-linear-gradient": {
+      "optional": true
+    },
+    "react-native-markdown-display": {
+      "optional": true
+    },
+    "react-native-reanimated": {
+      "optional": true
+    },
+    "react-native-svg": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@ai-native-elements/shadcn-ui": "workspace:*",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@ai-native-elements/tailwind-config": "workspace:*",
+    "@ai-native-elements/typescript-config": "workspace:*",
+    "@react-native-masked-view/masked-view": "^0.3.2",
+    "@types/react": "~19.1.0",
+    "expo-clipboard": "~8.0.0",
+    "expo-linear-gradient": "~15.0.5",
+    "nativewind": "^4.2.1",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-reanimated": "^4.2.1",
+    "react-native-svg": "^15.11.2",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.2"
+  }
+}
