@@ -4,8 +4,8 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 
 ## Legend
 - [ ] Not started
-- [~] In progress
-- [x] Completed
+- [~] Source ported, missing example page
+- [x] Completed (source + exported + example page)
 
 ---
 
@@ -20,7 +20,7 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 
 ---
 
-## Chatbot Components (29)
+## Chatbot Components
 
 ### Core Chat
 - [x] `conversation` - Chat container with auto-scroll
@@ -29,22 +29,22 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 - [ ] `response` - Response container wrapper
 
 ### Content Display
-- [ ] `code-block` - Syntax highlighted code display
-- [x] `reasoning` - Collapsible chain-of-thought
-- [x] `chain-of-thought` - Multi-step reasoning display
-- [x] `sources` - Citation list display
-- [ ] `inline-citation` - Inline reference markers
-- [ ] `context` - Context/background display
-- [x] `image` - Image rendering in messages
+- [x] `code-block` - Syntax highlighted code display
+- [~] `reasoning` - Collapsible chain-of-thought (no example page)
+- [~] `chain-of-thought` - Multi-step reasoning display (no example page)
+- [~] `sources` - Citation list display (no example page)
+- [~] `inline-citation` - Inline reference markers (no example page)
+- [~] `context` - Context/background display (no example page)
+- [~] `image` - Image rendering in messages (no example page)
 
 ### Tool Interactions
-- [ ] `tool` - Tool call display
-- [ ] `confirmation` - Tool approval workflow
+- [x] `tool` - Tool call display
+- [~] `confirmation` - Tool approval workflow (no example page)
 
 ### Planning & Tasks
-- [x] `plan` - AI-generated plans display
-- [x] `task` - Individual task display
-- [x] `queue` - Task queue management
+- [~] `plan` - AI-generated plans display (no example page)
+- [~] `task` - Individual task display (no example page)
+- [~] `queue` - Task queue management (no example page)
 
 ### UI Feedback
 - [x] `loader` - Spinning loader indicator
@@ -54,15 +54,15 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 ### Actions & Navigation
 - [ ] `actions` - Pre-built action buttons
 - [ ] `branch` - Conversation branching
-- [ ] `open-in-chat` - Chat navigation link
+- [x] `open-in-chat` - Chat navigation link
 
 ### Agent & Model
 - [ ] `agent` - Agent display
 - [ ] `persona` - Agent profile/avatar
-- [ ] `model-selector` - AI model picker
+- [x] `model-selector` - AI model picker
 
 ### Media & Voice
-- [ ] `attachments` - File attachments display
+- [x] `attachments` - File attachments display (placeholder example)
 - [ ] `audio-player` - Audio message player
 - [ ] `speech-input` - Voice-to-text input
 - [ ] `transcription` - Transcription display
@@ -71,34 +71,44 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 
 ---
 
-## Development/Utility Components (11)
+## Development/Utility Components
 
-- [ ] `terminal` - Terminal output display
-- [ ] `sandbox` - Code execution environment
-- [ ] `file-tree` - File explorer tree
-- [ ] `snippet` - Small code samples
-- [ ] `commit` - Git commit display
-- [ ] `schema-display` - Data schema viewer
-- [ ] `test-results` - Test execution results
-- [ ] `stack-trace` - Error stack trace display
-- [ ] `checkpoint` - Workflow checkpoints
-- [ ] `environment-variables` - Env var display
-- [ ] `package-info` - Package metadata
+- [x] `terminal` - Terminal output display
+- [~] `sandbox` - Code execution environment (no example page)
+- [x] `file-tree` - File explorer tree
+- [~] `snippet` - Small code samples (no example page)
+- [x] `commit` - Git commit display
+- [x] `schema-display` - Data schema viewer (placeholder example)
+- [x] `test-results` - Test execution results (placeholder example)
+- [x] `stack-trace` - Error stack trace display (placeholder example)
+- [x] `checkpoint` - Workflow checkpoints
+- [x] `environment-variables` - Env var display
+- [x] `package-info` - Package metadata
+
+---
+
+## Known Issues
+
+- `packages/elements/src/index.ts` has a **merge conflict** between two builder branches — needs manual resolution to include all exports: `schema-display`, `test-results`, `stack-trace`, `attachments`, `model-selector`, `open-in-chat`, `code-block`
+- `packages/elements/src/plan.tsx:182` has a pre-existing TypeScript DTS type error (Button ref mismatch) that breaks `pnpm build`
+- Example pages for `schema-display`, `test-results`, `stack-trace`, `attachments` are placeholder UIs — need to be wired to real component imports once index.ts conflict is resolved
 
 ---
 
 ## Summary
 
-| Category | Total | Completed |
-|----------|-------|-----------|
-| Setup | 6 | 6 |
-| Chatbot | 29 | 9 |
-| Dev/Utility | 11 | 0 |
-| **Total** | **46** | **16** |
+| Category | Total | Completed | In Progress |
+|----------|-------|-----------|-------------|
+| Setup | 6 | 6 | 0 |
+| Chatbot | 28 | 9 | 7 |
+| Dev/Utility | 11 | 8 | 2 |
+| **Total** | **45** | **23** | **9** |
 
-### Not Porting
-- **Vibe-Coding Components** (artifact, web-preview) - Web-specific features
-- **Workflow Components** (canvas, node, edge, connection, panel, toolbar, controls) - Requires ReactFlow which has no React Native equivalent
+---
+
+## Not Porting
+- **Vibe-Coding Components** (`artifact`, `web-preview`) - Web-specific features
+- **Workflow Components** (`canvas`, `node`, `edge`, `connection`, `panel`, `toolbar`, `controls`) - Requires ReactFlow which has no React Native equivalent
 
 ---
 
@@ -106,10 +116,11 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 
 ### Platform Considerations
 - Voice components will need `expo-av` or similar
+- File attachments may need `expo-document-picker` / `expo-image-picker`
 
 ### Dependencies to Research
 - Syntax highlighting: `react-native-syntax-highlighter` or `shiki` alternative
-- Markdown rendering: `react-native-markdown-display` or custom solution
+- Markdown rendering: `react-native-markdown-display` (already used in `message`)
 - Animations: `react-native-reanimated` (already in RN Reusables)
 
 ### Architecture Decisions
