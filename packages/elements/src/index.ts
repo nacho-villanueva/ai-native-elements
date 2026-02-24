@@ -22,3 +22,6 @@ export * from "./suggestion";
 
 // Tool Components
 export * from "./tool";
+
+// Developer Tools
+export * from "./terminal";

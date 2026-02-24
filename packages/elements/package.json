@@ -49,10 +49,14 @@
     "react-native": ">=0.73.0",
     "react-native-markdown-display": ">=7.0.0",
     "react-native-reanimated": ">=3.0.0",
+    "expo-clipboard": ">=6.0.0",
     "react-native-svg": ">=13.0.0"
   },
   "peerDependenciesMeta": {
     "@react-native-masked-view/masked-view": {
+      "optional": true
+    },
+    "expo-clipboard": {
       "optional": true
     },
     "expo-linear-gradient": {
@@ -79,6 +83,7 @@
     "@ai-native-elements/typescript-config": "workspace:*",
     "@react-native-masked-view/masked-view": "^0.3.2",
     "@types/react": "~19.1.0",
+    "expo-clipboard": "~8.0.0",
     "expo-linear-gradient": "~15.0.5",
     "nativewind": "^4.2.1",
     "react": "19.1.0",
