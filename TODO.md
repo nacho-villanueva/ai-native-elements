@@ -30,12 +30,12 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 
 ### Content Display
 - [ ] `code-block` - Syntax highlighted code display
-- [ ] `reasoning` - Collapsible chain-of-thought
-- [ ] `chain-of-thought` - Multi-step reasoning display
-- [ ] `sources` - Citation list display
+- [x] `reasoning` - Collapsible chain-of-thought
+- [x] `chain-of-thought` - Multi-step reasoning display
+- [x] `sources` - Citation list display
 - [ ] `inline-citation` - Inline reference markers
 - [ ] `context` - Context/background display
-- [ ] `image` - Image rendering in messages
+- [x] `image` - Image rendering in messages
 
 ### Tool Interactions
 - [ ] `tool` - Tool call display
@@ -92,9 +92,9 @@ This document tracks the progress of porting [Vercel AI Elements](https://github
 | Category | Total | Completed |
 |----------|-------|-----------|
 | Setup | 6 | 6 |
-| Chatbot | 29 | 6 |
+| Chatbot | 29 | 10 |
 | Dev/Utility | 11 | 0 |
-| **Total** | **46** | **12** |
+| **Total** | **46** | **16** |
 
 ### Not Porting
 - **Vibe-Coding Components** (artifact, web-preview) - Web-specific features
